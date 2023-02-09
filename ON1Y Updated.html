@@ -105,83 +105,45 @@
 </div>
 <style>
     .menu {
-        display: flex;
-        justify-content: center;
-        border: 1px solid rgb(0, 0, 0);
+      display: flex;
+      justify-content: center;
+      border: 1px solid rgb(0, 0, 0);
     }
-    .menu ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
+    .menu select {
+      font-size: 20px;
+      padding: 10px;
+      width: 200px;
+      color: #68ae34;
+      background-color: #fff;
+      border: none;
+      border-radius: 5px;
+      appearance: none;
     }
-    .menu li {
-        margin: 0 10px;
+    .menu option {
+      color: #68ae34;
     }
-    .menu a {
-        font-size: 20px;
-        text-decoration: none;
-        color: #68ae34;
-        transition: all 0.2s ease-in-out;
-    }
-    .menu a:hover {
-        color: #000000;
-    }
-    .menu .jw-menu-is-active a {
-        color: #68ae34;
-        font-weight: bold;
-    }
-</style>
-
-<nav class="menu jw-menu-copy">
-    <ul id="jw-menu" class="jw-menu jw-menu-horizontal">
-        <li class="jw-menu-item jw-menu-is-active">
-            <a class="jw-menu-link js-active-menu-item" href="/" data-page-link-id="10668462">
-                HOME
-            </a>
-        </li>
-        <li class="jw-menu-item">
-            <a class="jw-menu-link" href="/we-are-on1y" data-page-link-id="10668463">
-                WE ARE ON1Y
-            </a>
-        </li>
-        <li class="jw-menu-item">
-            <a class="jw-menu-link" href="/now-casting" data-page-link-id="10668464">
-                NOW CASTING
-            </a>
-        </li>
-        <li class="jw-menu-item">
-            <a class="jw-menu-link" href="/coming" data-page-link-id="10819179">
-                COMING SOON
-            </a>
-        </li>
-        <li class="jw-menu-item">
-            <a class="jw-menu-link" href="/rate-your-favorite-act-up" data-page-link-id="11391138">
-                RATE YOUR FAVORITE ACT UP
-            </a>
-        </li>
-        <li class="jw-menu-item">
-            <a class="jw-menu-link" href="/meet-the-men-of-apex-now-casting" data-page-link-id="12563344">
-                MEET THE MEN OF APEX (NOW CASTING)
-            </a>
-        </li>
-        <li class="jw-menu-item">
-            <a class="jw-menu-link" href="/now-hiring" data-page-link-id="12008594">
-                NOW HIRING
-            </a>
-        </li>
-        <li class="jw-menu-item">
-            <a class="jw-menu-link" href="/Sponsors" data-page-link-id="12008595">
-                Sponsors
-            </a>
-        </li>
-        <li class="jw-menu-item">
-            <a class="jw-menu-link" href="/Contact" data-page-link-id="12008596">
-                Contact
-            </a>
-        </li>
-    </ul>
+  </style>
+  
+  <nav class="menu jw-menu-copy">
+    <select id="jw-menu-dropdown">
+      <option value="/" selected>HOME</option>
+      <option value="/we-are-on1y">WE ARE ON1Y</option>
+      <option value="/now-casting">NOW CASTING</option>
+      <option value="/coming">COMING SOON</option>
+      <option value="/rate-your-favorite-act-up">RATE YOUR FAVORITE ACT UP</option>
+      <option value="/meet-the-men-of-apex-now-casting">MEET THE MEN OF APEX (NOW CASTING)</option>
+      <option value="/now-hiring">NOW HIRING</option>
+      <option value="/Sponsors">Sponsors</option>
+      <option value="/Contact">Contact</option>
+    </select>
   </nav>
+  
+  <script>
+    document.getElementById("jw-menu-dropdown").onchange = function() {
+      window.location.href = this.value;
+    };
+  </script>
+  
 
     <script id="jw-mobile-menu-template" type="text/template">
         <ul id="jw-menu" class="jw-menu jw-menu-horizontal">
@@ -713,7 +675,7 @@
       <div class="jw-container jw-tree-container">
         <div class="jw-image-text jw-node-is-first-child jw-node-is-last-child">
           <div class="jw-element-imagetext-text">
-            <p>WE ARE ONLY&nbsp;</p>
+            <p>WE ARE ON1Y&nbsp;</p>
           </div>
         </div>
       </div>
@@ -721,7 +683,7 @@
         <div class="jw-credits-owner">
           <div class="jw-footer-text">
             <div class="jw-footer-text-content">
-              &copy; 2022 ONLY NETWORK&trade;️
+              &copy; 2022 ON1Y NETWORK&trade;️
             </div>
           </div>
         </div>
